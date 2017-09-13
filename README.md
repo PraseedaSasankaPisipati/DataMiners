@@ -1,4 +1,4 @@
-# Team-5-DataMiners
+# Team-DataMiners
 
 ## Group Members
 1. Praseeda Sasanka
