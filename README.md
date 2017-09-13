@@ -5,15 +5,15 @@
 2. Sowjanya
 3. Zahra
 
-### Data Sets 
+### Data Sets Priorities
 
 1. Excess Deaths 
 
- This data set helps us in evaluating the cause of deaths in various states and increase the heath consoiussness among the people.
+ This data set helps us in evaluating the cause of deaths in various states and increase the heath consciousness among the people. We are interested to know the causes and educate our family members from the findings we get from this data
  
 2. Nebraska Crime
 
- Helps us to evaluate the safety measures in a state as internatioanl students and also ensure our parents that we live in a safe state peacefully 
+ The crime information is always of interest to the people living in that particular state. It helps the individuals in taking necessary precautions as and when required. Also helps us to evaluate the safety measures in a state as internatioanl students and also ensure our parents that we live in a safe state peacefully 
  
  3. Software Engineering Teams 
  
