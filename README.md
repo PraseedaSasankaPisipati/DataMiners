@@ -9,7 +9,7 @@
 
 1. Excess Deaths 
 
- Helps us in evaluating the cause of detahs in various states and increase the heath consoiussness among the people
+ This data set helps us in evaluating the cause of deaths in various states and increase the heath consoiussness among the people.
  
 2. Nebraska Crime
 
