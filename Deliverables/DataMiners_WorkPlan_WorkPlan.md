@@ -22,8 +22,8 @@ This Document Includes:
 9. What is the ratio between the observed deaths and the Population?
 10. What is the ratio between the expected deaths and the Population?
 
-## Planned Timeline:
-            Work Plan & Research Questions    Week 5
+## Work Plan
+            Work Plan & Research Questions    Week 5        
             Data Cleaning                     Week 9
             Progress Meeting                  Week 9
             R Script                          Week 11
@@ -31,6 +31,22 @@ This Document Includes:
             Audience Persona                  Week 14
             Project Presentation              Week 15
             Git Final Package Build           Week 16
+
+## Projected Effort Allocation:
+            Work Plan & Gantt Chart           Primary Responsibility: Praseeda Sasanka
+            Research Questions                Primary Responsibility: Sowjanya Joga and Zahra
+            Markdown Document Editing         Primary Responsibility: Sowjanya Joga
+            Data Cleaning                     Primary Responsibility: Praseeda Sasanka, Sowjanya and Zahra
+            Progress Meeting                  Primary Responsibility: Praseeda Sasanka, Sowjanya and Zahra
+            R Script                          Primary Responsibility: Zahra, Praseeda Sasanka and Sowjanya
+            R Plot                            Primary Responsibility: Praseeda Sasanka, Zahra and Sowjanya
+            Audience Persona                  Primary Responsibility: Sowjanya, Praseeda Sasanka and Zahra
+            Project Presentation              Primary Responsibility: Sowjanya, Praseeda Sasanka and Zahra
+            Git Final Package Build           Primary Responsibility: Sowjanya, Praseeda Sasanka and Zahra
+            Final Documentation               Primary Responsibility: Sowjanya
+            Git Hub OWner                     Primary Responsibility: Praseeda Sasanka
+            Minutes of Meeting                Primary Responsibility: Zahra
+            Graphs,Tables,Reports             Primary Responsibility: Sowjanya, Praseeda Sasanka and Zahra
 
 
 ## Target Audience:
