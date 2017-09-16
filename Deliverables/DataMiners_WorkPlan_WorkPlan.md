@@ -23,6 +23,8 @@ This Document Includes:
 10. What is the ratio between the expected deaths and the Population?
 
 ## Planned Timeline:
+| Team | Time(EST) | Temperature(Degree Celsius) | Density(kg/cubic meter) | Colony Diameter(meters) | Species | Depth(meters) | Chippo #/L | Chippo Colony Size(millimeter) | Chlorophyll A | Station | Miscellaneous Information |
+|------|-----------|-----------------------------|-----------------|-------------------------|---------|---------------|------------|--------------------------------|---------------|---------|---------------------------|
 Team  |   Work Plan & RQs  | Week 5 
 Team  |   Data Cleaning    | Week 9 
 Team Progress Meeting  |  Week 9 5
