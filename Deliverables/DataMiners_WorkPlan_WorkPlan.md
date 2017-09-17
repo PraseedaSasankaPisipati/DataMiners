@@ -25,7 +25,7 @@ This data represented the percentage of expected death, observed deaths and pote
 
 ## Work Plan
             Work Plan & Research Questions    Week 5        
-            Data Cleaning                     Week 9
+            Data Cleaning                     Week 7
             Progress Meeting                  Week 9
             R Script                          Week 11
             R Plot                            Week 12
