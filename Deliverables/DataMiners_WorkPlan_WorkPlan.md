@@ -7,6 +7,7 @@ This Document Includes:
 5. Target Audience
 
 ## 1. Introduction to the Data Set
+This data represented the percentage of expected death, observed deaths and potential death in different states in the United States. All data collected based on five leading causes of death in metropolitan and non-metropolitan areas. Heart disease, Cancer, Unintentional injury, Chronic lower respiratory disease and Stroke are the major causes of death that patients are spending so much money for any treatment for them. With analyzing this data and finding differences between Expected Deaths and Observed Death,  health care can improve public health programs that support healthier behaviors to better access to health care services for the purpose of reducing the rate of potentially excess deaths.
 
 ## 2. Draft Research Questions
 1. What is the ratio between the observed deaths and expected deaths?
