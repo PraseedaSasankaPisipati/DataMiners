@@ -1,5 +1,5 @@
 ### This is an informal markdown document for the team project in the "Data to Decisions" Course.
-This Document Includes:
+This Document includes:
 1. Introduction to the Data Set
 2. Draft Research Questions
 3. Work Plan
@@ -23,7 +23,7 @@ This data represented the percentage of expected death, observed deaths and pote
 9. What is the ratio between the observed deaths and the Population?
 10. What is the ratio between the expected deaths and the Population?
 
-## Work Plan
+## 3. Work Plan
             Work Plan & Research Questions    Week 5        
             Data Cleaning                     Week 7
             Progress Meeting                  Week 9
@@ -33,7 +33,7 @@ This data represented the percentage of expected death, observed deaths and pote
             Project Presentation              Week 15
             Git Final Package Build           Week 16
 
-## Projected Effort Allocation:
+## 4. Projected Effort Allocation:
             Work Plan & Gantt Chart           Primary Responsibility: Praseeda Sasanka
             Research Questions                Primary Responsibility: Sowjanya Joga and Zahra
             Markdown Document Editing         Primary Responsibility: Sowjanya Joga
@@ -50,7 +50,7 @@ This data represented the percentage of expected death, observed deaths and pote
             Graphs,Tables,Reports             Primary Responsibility: Sowjanya, Praseeda Sasanka and Zahra
 
 
-## Target Audience:
+## 5. Target Audience:
 The potential users of this particular data set can be: 
 * Doctors 
 * Insurance Providers, 
