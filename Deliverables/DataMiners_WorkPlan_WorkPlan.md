@@ -57,3 +57,9 @@ The potential users of this particular data set can be:
 * Medicine Companies
 * Patients 
 * Health Researchers’ Groups.
+
+## 6. List of Files
+ * DataMiners-ProjectPlan.pdf
+       This is the PDF format for the gnatt chart we have prepared. The gnatt chart explains in detail the break down list of the tasks that we as a team identifed and decided to complete as a part of this project.
+       
+       The tasks for each week mentioned above in work plan are explained in detail in the gnatt chart and the work efforts for these tasks are estimated.
