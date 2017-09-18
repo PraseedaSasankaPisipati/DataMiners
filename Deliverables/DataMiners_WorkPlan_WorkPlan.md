@@ -24,14 +24,14 @@ This data represented the percentage of expected death, observed deaths and pote
 10. What is the ratio between the expected deaths and the Population?
 
 ## 3. Work Plan
-            Work Plan & Research Questions    Week 5        
-            Data Cleaning                     Week 7
-            Progress Meeting                  Week 9
-            R Script                          Week 11
-            R Plot                            Week 12
-            Audience Persona                  Week 14
-            Project Presentation              Week 15
-            Git Final Package Build           Week 16
+            Work Plan & Research Questions                             Week 5        
+            Data Cleaning                                              Week 7
+            Progress Meeting & Data Cleaning Documentation             Week 9
+            R Script                                                   Week 11
+            R Plot                                                     Week 12
+            Audience Persona                                           Week 14
+            Project Presentation                                       Week 15
+            Git Final Package Build                                    Week 16
 
 ## 4. Projected Effort Allocation:
             Work Plan & Gantt Chart           Primary Responsibility: Praseeda Sasanka
