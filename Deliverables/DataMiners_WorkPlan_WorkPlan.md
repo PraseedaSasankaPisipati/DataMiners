@@ -60,11 +60,12 @@ The potential users of this particular data set can be:
 * Patients 
 * Health Researchers’ Groups.
 
-## APA Citation:
+## License Information for the Data Set:
+The License details for the Excess Deaths Data Set can be found in [License Info](https://www.cms.gov/about-cms/agency-information/aboutwebsite/privacy-policy.html)
 
+## APA Citation:
 National Center for Health Statistics. (2017, August 28). Retrieved September 04, 2017, from https://www.cdc.gov/nchs/data-visualization/potentially-excess-deaths/index.htm
 
 
-## License:
-[License Info](https://www.cms.gov/about-cms/agency-information/aboutwebsite/privacy-policy.html)
+
 
