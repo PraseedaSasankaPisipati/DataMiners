@@ -19,5 +19,10 @@
  
  4. Storm Events.
  
+ ### List of Files
+ 1. DataMiners_WorkPlan_WorkPlan.md
+ 
+ 2. DataMiners_ProjectPlan_GanttChart.pdf
+ 
  
   
