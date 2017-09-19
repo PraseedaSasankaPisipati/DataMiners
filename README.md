@@ -20,9 +20,14 @@
  4. Storm Events.
  
  ### List of Files
- 1. DataMiners_WorkPlan_WorkPlan.md
- 
- 2. DataMiners_ProjectPlan_GanttChart.pdf
+1. LICENSE
+> This file consiste of the License information for this repository
+2. NCHS_-_Potentially_Excess_Deaths_from_the_Five_Leading_Causes_of_Death_second%20one.csv
+> This is the Excess Deaths data set in an excel format
+3. Deliverables/DataMiners_WorkPlan_WorkPlan.md
+> This is an informal document which includes a brief introduction of the data set, draft research questions, work plan, project estimate and target audience
+4. Deliverables/DataMiners_ProjectPlan_GanttChart.pdf
+> This is a detailed representation of the projet plan 
  
  
   
