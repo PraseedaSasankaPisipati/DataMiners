@@ -24,6 +24,8 @@ This data represented the percentage of expected death, observed deaths and pote
 10. What is the ratio between the expected deaths and the Population?
 
 ## 3. Work Plan
+Below is the Work Plan which reflects the deadlines provided for the deliverables in the Syllabus of the Course. A detailed description of the Plan can be seen in [Gantt Chart](https://github.com/PraseedaSasankaPisipati/DataMiners/blob/master/Deliverables/DataMiners_Project_Plan_GanttChart.pdf)
+
             Work Plan & Research Questions                             Week 5        
             Data Cleaning                                              Week 7
             Progress Meeting & Data Cleaning Documentation             Week 9
