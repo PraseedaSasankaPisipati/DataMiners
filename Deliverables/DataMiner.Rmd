@@ -1,15 +1,14 @@
 # Data Cleaning Document
-
-## Preface
+### Preface
 This document is prepared by Data Miners Team for the purpose of providing background information of the data set. This document also includes the code which was executed to clean the data set.
 
-## Target Audience
+### Target Audience
 The potential users of this particular data set can be:
 * Doctors
 * Medicine Companies
 * Health Researchers’ Groups
 
-## Table of Contents
+### Table of Contents
 1. Introduction
 2. Draft Research Questions
 3. License
@@ -18,12 +17,12 @@ The potential users of this particular data set can be:
 6. Strategy for Data Cleaning
 7. R script for Data Cleaning
 
-## Introduction
+### 1. Introduction
 This data represented the percentage of expected death, observed deaths and potential death in different states in the United States. All data is collected based on five leading causes of death in metropolitan and non-metropolitan areas. Heart disease, Cancer, Unintentional injury, Chronic lower respiratory disease and Stroke are the major causes of death that patients are spending so much money for any treatment for them. The data consists of 20,5921 rows and 13 columns.
 
 With analyzing this data and finding differences between Expected Deaths and Observed Deaths, health care can improve public health programs that support healthier behaviors to better access the health care services for the purpose of reducing the rate of potentially excess deaths.
 
-## Draft Research Questions
+### 2. Draft Research Questions
 1. What is the ratio between the observed deaths and expected deaths?
 2. The states in which the observed deaths are more in number than the expected deaths?
 3. In which area are most deaths observed (metropolitan or non-metropolitan)?
@@ -37,15 +36,45 @@ Note: “2010 Fixed” is a fixed benchmark based on the best performing States 
 9. What is the ratio between the observed deaths and the Population?
 10. What is the ratio between the expected deaths and the Population?
 
+## 3. License:
+The License details for the Excess Deaths Data Set can be found in [License Info](https://www.cms.gov/about-cms/agency-information/aboutwebsite/privacy-policy.html)
+
+There are no constraints on this data in regards to the license. This is public data set and can be downloaded by any individual within or outside the organization. 
+
+## 4. Metadata
+This data set was collected for the years 2005-2015
+**Mortality** data for U.S. residents come from the National Vital Statistics System. Estimates based on fewer than 10 observed deaths are not shown and shaded yellow on the map.
+
+**Underlying cause of death** is based on the International Classification of Diseases, 10th Revision (ICD-10)
+
+Heart disease (I00-I09, I11, I13, and I20–I51)
+Cancer (C00–C97)
+Unintentional injury (V01–X59 and Y85–Y86)
+Chronic lower respiratory disease (J40–J47)
+Stroke (I60–I69)
+
+**Locality** (nonmetropolitan vs. metropolitan) is based on the Office of Management and Budget’s 2013 county-based classification scheme.
+
+**Benchmarks** are based on the three states with the lowest age and cause-specific mortality rates.
+
+**Potentially excess deaths** for each state are calculated by subtracting deaths at the benchmark rates (expected deaths) from observed deaths.
+
+Users can explore three benchmarks:
+
+“2010 Fixed” is a fixed benchmark based on the best performing States in 2010.
+“2005 Fixed” is a fixed benchmark based on the best performing States in 2005.
+“Floating” is based on the best performing States in each year so change from year to year.
+
+Page last reviewed: July 14, 2017
+Page last updated: August 28, 2017
+Content source: [CDC/National Center for Health Statistics](https://www.cdc.gov/nchs/)
+
+## 5. Issues during Data Cleaning
+
+## 6. Strategies for Data Cleaning
 
 
-
-
-
-
-
-
-
+## 7. R Script for Data Cleaning
 ---
 title: "NCHS"
 output: word_document
