@@ -31,7 +31,7 @@ With analyzing this data and finding differences between Expected Deaths and Obs
 6. In which year are the most deaths observed?
 7. In which benchmark are more deaths observed?
 > Note: “2010 Fixed” is a fixed benchmark based on the best performing States in 2010.
-“2015 Fixed” is a fixed benchmark based on the best performing States in 2015.
+        “2015 Fixed” is a fixed benchmark based on the best performing States in 2015.
 8. What are the top 5 states with more observed deaths in each category?
 9. What is the ratio between the observed deaths and the Population?
 10. What is the ratio between the expected deaths and the Population?
