@@ -23,18 +23,23 @@ This data represented the percentage of expected death, observed deaths and pote
 With analyzing this data and finding differences between Expected Deaths and Observed Deaths, health care can improve public health programs that support healthier behaviors to better access the health care services for the purpose of reducing the rate of potentially excess deaths.
 
 ### 2. Draft Research Questions
-1. What is the ratio between the observed deaths and expected deaths?
-2. The states in which the observed deaths are more in number than the expected deaths?
-3. In which area are most deaths observed (metropolitan or non-metropolitan)?
-4. In which age group are the most deaths observed?
-5. Which is the leading cause for death in each age group?
-6. In which year are the most deaths observed?
-7. In which benchmark are more deaths observed?
-> Note: “2010 Fixed” is a fixed benchmark based on the best performing States in 2010.  
-“2015 Fixed” is a fixed benchmark based on the best performing States in 2015.
-8. What are the top 5 states with more observed deaths in each category?
-9. What is the ratio between the observed deaths and the Population?
-10. What is the ratio between the expected deaths and the Population?
+1. What is the ratio between observed deaths and expected deaths? In which State is the ratio found greater than one maximum number of times?
+2. Which states have more observed deaths than expected deaths?
+3. In which locality is it more likely that the observed deaths (metropolitan or non-metropolitan) are more in each age group?
+4. In which age group are the most deaths observed and what is the leading cause?
+5. In which year are the most deaths observed ?
+6. In which benchmark are more deaths observed ?How does this vary over time by locality?
+Note: “2010 Fixed” is a fixed benchmark based on the best performing States in 2010. 
+      “2015 Fixed” is a fixed benchmark based on the best performing States in 2015.
+7. What are the top 5 states with more observed deaths in each category?
+8. What is the ratio between the observed deaths and the Population? What is the trend of the ratios over time?
+9. What is the ratio between the expected deaths and the Population? What is the trend of the ratios over time?
+10. In which years are the observed deaths less in number when compared to the previous year?
+11. What are the maximum and minimum number of deaths in the same age group for a particular cause of death in each state?
+12. What are the top 5 states in each category:
+    a. Number of observed deaths less than Benchmark
+    b. Number of observed deaths equals benchmark
+    c. Number of observed deaths greater than Benchmark
 
 ## 3. License:
 The License details for the Excess Deaths Data Set can be found in [License Info](https://www.cms.gov/about-cms/agency-information/aboutwebsite/privacy-policy.html)
@@ -126,5 +131,3 @@ str(aft_mis_dat)
 
 ```
 
-#ABC
-text
