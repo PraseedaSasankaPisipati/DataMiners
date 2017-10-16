@@ -13,8 +13,8 @@ The potential users of this particular data set can be:
 2. Draft Research Questions
 3. License
 4. Metadata
-5. Issues encounterd with Data Cleaning
-6. Strategy for Data Cleaning
+5. Strategy for Data Cleaning
+6. Issues encounterd with Data Cleaning
 7. R script for Data Cleaning
 
 ### 1. Introduction
