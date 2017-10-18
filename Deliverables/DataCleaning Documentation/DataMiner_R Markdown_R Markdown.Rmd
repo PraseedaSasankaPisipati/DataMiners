@@ -88,9 +88,9 @@ _Steps/Strategies for cleaning data_:
 
 ## 6. Issues during Data Cleaning
 Below are the issues faced during cleaning the data set
-	As this was the first time, all the team members are using R for data analysis, it took us time to get familiar with R. For example, creation of block for the code to run and closing the block before running the code
-	Another issue was, we had the age range as 0-59, 0-64, 0-74 and so on but with the same locality, state and year. Initially, the team felt this might be redundant data. But later, when we looked at the total population values, the numbers kept increasing for each range. So, we finally reviewed the description of the data in the CDC website and understood that the age ranges were always kept at standard minimum value ‘0’. As there is no redundancy we didn’t delete any data.
-	Deciding on which method to follow for the missing data was not an easy task. It consumed a lot of time too. 
+1. As this was the first time, all the team members are using R for data analysis, it took us time to get familiar with R. For example, creation of block for the code to run and closing the block before running the code
+2. Another issue was, we had the age range as 0-59, 0-64, 0-74 and so on but with the same locality, state and year. Initially, the team felt this might be redundant data. But later, when we looked at the total population values, the numbers kept increasing for each range. So, we finally reviewed the description of the data in the CDC website and understood that the age ranges were always kept at standard minimum value ‘0’. As there is no redundancy we didn’t delete any data.
+3. Deciding on which method to follow for the missing data was not an easy task. It consumed a lot of time too. 
 
 
 ## 7. R Script for Data Cleaning
