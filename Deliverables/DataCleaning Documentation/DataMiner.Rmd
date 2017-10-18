@@ -16,6 +16,7 @@ The potential users of this particular data set can be:
 5. Strategy for Data Cleaning
 6. Issues encounterd with Data Cleaning
 7. R script for Data Cleaning
+8. Citation
 
 ### 1. Introduction
 This data represented the percentage of expected death, observed deaths and potential death in different states in the United States. All data is collected based on five leading causes of death in metropolitan and non-metropolitan areas. Heart disease, Cancer, Unintentional injury, Chronic lower respiratory disease and Stroke are the major causes of death that patients are spending so much money for any treatment for them. The data consists of 20,5921 rows and 13 columns.
@@ -9274,6 +9275,10 @@ duplicated(dat)
 ## [99980] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
 ## [99991] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
 ##  [ reached getOption("max.print") -- omitted 105921 entries ]
+
+## Citation
+### APA Citation:
+National Center for Health Statistics. (2017, August 28). Retrieved September 04, 2017, from https://www.cdc.gov/nchs/data-visualization/potentially-excess-deaths/index.htm
 
 
 
