@@ -5,6 +5,7 @@ This document is prepared by Data Miners Team for the purpose of providing backg
 ### Target Audience
 The potential users of this particular data set can be:
 * Doctors
+* Patients
 * Medicine Companies
 * Health Researchers’ Groups
 
