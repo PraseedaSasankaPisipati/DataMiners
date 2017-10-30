@@ -1,0 +1,176 @@
+---
+title: "Team"
+output: word_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+Title: "NCHS"
+
+This document is prepared by Data Miners Team for the purpose of providing background information of the data set. This document also includes the code which was executed to clean the data set.
+
+# Target Audience
+
+The potential users of this particular data set can be:
+
+1. Doctors
+2. Medicine Companies
+3. Health Researchers’ Groups
+4. Table of Contents
+
+# Content:
+1. Introduction
+2. Draft Research Questions
+3. License
+4. Metadata
+5. Issues encounterd with Data Cleaning
+6. Strategy for Data Cleaning
+7. R script for Data Cleaning
+
+
+1. Introduction
+
+This data represented the percentage of expected death, observed deaths and potential death in different states in the United States. All data is collected based on five leading causes of death in metropolitan and non-metropolitan areas. Heart disease, Cancer, Unintentional injury, Chronic lower respiratory disease and Stroke are the major causes of death that patients are spending so much money for any treatment for them. The data consists of 20,5921 rows and 13 columns.
+
+With analyzing this data and finding differences between Expected Deaths and Observed Deaths, health care can improve public health programs that support healthier behaviors to better access the health care services for the purpose of reducing the rate of potentially excess deaths.
+
+2. Draft Research Questions
+
+2.1 What is the ratio between observed deaths and expected deaths? In which State is the ratio found greater than one maximum number of times?
+
+2.2 Which states have more observed deaths than expected deaths?
+
+2.3 In which locality is it more likely that the observed deaths (metropolitan or non-metropolitan) are more in each age group?
+
+2.4 In which age group are the most deaths observed and what is the leading cause?
+
+2.5 In which year are the most deaths observed ?
+
+2.6 In which benchmark are more deaths observed ?How does this vary over time by locality? Note: “2010 Fixed” is a fixed benchmark based on the best performing States in 2010. “2015 Fixed” is a fixed benchmark based on the best performing States in 2015.
+
+2.7 What are the top 5 states with more observed deaths in each category?
+
+2.8 What is the ratio between the observed deaths and the Population? What is the trend of the ratios over time?
+
+2.9 What is the ratio between the expected deaths and the Population? What is the trend of the ratios over time?
+
+2.10 In which years are the observed deaths less in number when compared to the previous year?
+
+2.11 What are the maximum and minimum number of deaths in the same age group for a particular cause of death in each state?
+
+2.12 What are the top 5 states in each category: a. Number of observed deaths less than Benchmark b. Number of observed deaths equals benchmark c. Number of observed deaths greater than Benchmark
+3. License:
+
+The License details for the Excess Deaths Data Set can be found in License Info
+
+There are no constraints on this data in regards to the license. This is public data set and can be downloaded by any individual within or outside the organization.
+
+4. Metadata
+
+This data set was collected for the years 2005-2015 Mortality data for U.S. residents come from the National Vital Statistics System. Estimates based on fewer than 10 observed deaths are not shown and shaded yellow on the map.
+
+Underlying cause of death is based on the International Classification of Diseases, 10th Revision (ICD-10)
+
+Heart disease (I00-I09, I11, I13, and I20–I51) Cancer (C00–C97) Unintentional injury (V01–X59 and Y85–Y86) Chronic lower respiratory disease (J40–J47) Stroke (I60–I69)
+
+Locality (nonmetropolitan vs. metropolitan) is based on the Office of Management and Budget’s 2013 county-based classification scheme.
+
+Benchmarks are based on the three states with the lowest age and cause-specific mortality rates.
+
+Potentially excess deaths for each state are calculated by subtracting deaths at the benchmark rates (expected deaths) from observed deaths.
+
+Users can explore three benchmarks:
+
+“2010 Fixed” is a fixed benchmark based on the best performing States in 2010. “2005 Fixed” is a fixed benchmark based on the best performing States in 2005. “Floating” is based on the best performing States in each year so change from year to year.
+
+Page last reviewed: July 14, 2017 Page last updated: August 28, 2017 Content source: CDC/National Center for Health Statistics.
+
+5. Steps/Strategies for cleaning data:
+
+5.1 Analyzed the research questions and identified the required columns for analysis of Excess Deaths data set.
+
+5.2 Reviewed the format of the column values in the data set to understand which command in R will be more effective to be used for this format.
+
+5.3 Checked the format of the data set to see which kind of command is needed to use in R and executed those commands in R Studio.
+
+5.4 The summary of data was obtained using R to get an overall view of the data.
+
+5.5 Performed a check for missing data and found all missing data. Replaced all missing data with “NA”.
+
+5.6 Tried to figure out how can we deal missing value like deleting the observations, deleting the variable, prediction or imputation with mean/median/mode. By keen observation of the data, decision was taken to delete the observations as the incomplete data cannot be of much use for the analysis. There are enormous number of observations in the data set, where all the classifications are sufficiently represented in the data. For example, having the details of locality, age, cause of death without the metrics like Expected Deaths, Potentially Excess Deaths is of not much use for analysis.
+
+5.7 checked for finding duplicate value.
+
+
+6. Issues during Data Cleaning
+
+Below are the issues faced during cleaning the data set 	As this was the first time, all the team members are using R for data analysis, it took us time to get familiar with R. For example,one issue was creation of block for the code to run and closing the block before running the code. Another issue was the age range as 0-59, 0-64, 0-74 and so on but with the same locality, state and year. Initially, the team felt this might be redundant data. But later, when we looked at the total population values, the numbers kept increasing for each range. So, we finally reviewed the description of the data in the CDC website and understood that the age ranges were always kept at standard minimum value ‘0’. As there is no redundancy we didn’t delete any data. 	Deciding on which method to follow for the missing data was not an easy task. It consumed a lot of time too.
+
+# read data with csv format.
+
+
+```{r}
+#read data
+Zahra<-read.csv("NCHS.csv")
+#Summary of dataAsal<-No.missing_Zahra
+str(Zahra)
+# find duplicate value
+duplicated(Zahra)
+# find missing values
+sum(is.na(Zahra))
+No.missing_Zahra<-na.omit(Zahra)
+#sum(is.na(aft_mis_dat))
+str(No.missing_Zahra)
+summary(No.missing_Zahra)
+# find duplicate value
+duplicated(No.missing_Zahra)
+Asal<-No.missing_Zahra
+#check for missing data again
+sum(is.na(Asal))
+#mean
+mean(Asal$Expected.Deaths)
+mean(Asal$Potentially.Excess.Deaths)
+mean(Asal$Observed.Deaths)
+#standard deviation
+sd(Asal$Expected.Deaths)
+sd(Asal$Observed.Deaths)
+sd(Asal$Potentially.Excess.Deaths)
+#Histogram
+hist(Asal$Observed.Deaths)
+hist(Asal$Expected.Deaths)
+hist(Asal$Potentially.Excess.Deaths)
+hist(Asal$Population, col="blue", xlab = "Observed.Deaths", main = "Histogram of Death")
+hist(Asal$Population, col="blue", xlab = "Expected.Deaths", main = "Histogram of Death")
+hist(Asal$Population, col="blue", xlab = "Potentially.Excess.Deaths", main = "Histogram of Death")
+hist(Asal$Population, col="blue", xlab = "Cause.of.Death", main = "Histogram of Death")
+
+#boxplot & #Scotter Plot
+boxplot(Asal$Observed.Deaths)
+plot(Asal$Expected.Deaths)
+boxplot(Asal$Potentially.Excess.Deaths)
+boxplot(Asal$Observed.Deaths ~ Asal$Expected.Deaths)
+boxplot(Asal$Observed.Deaths ~ Asal$Cause.of.Death)
+#Scotterplot matrix
+pairs(~Asal$Expected.Deaths+Asal$Potentially.Excess.Deaths+Asal$Observed.Deaths)
+hist(Asal$Observed.Deaths, prob=TRUE)
+lines(Asal$Observed.Deaths)
+#Anova table
+Anova.aov= aov(Asal$Expected.Deaths~Asal$Cause.of.Death)
+Anova.aov
+summary(Anova.aov)
+#Linear Regression
+Regression<-lm(Asal$Expected.Deaths ~ Asal$Cause.of.Death + Asal$Population)
+summary(Regression)
+#plot with ggplot
+qplot(Asal$Expected.Deaths, cnt, data = Asal, geom = c("boxplot"), fill = Asal$Expected.Deaths)
+gplot(Asal$Expected.Deaths) +geom_bar( aes(Asal$Cause.of.Death) )
+gplot(Asal, aes(Expected.Deaths, Cause.of.Death))
+#coeffeceint
+# variable = lm(model)
+
+#Regression$coeff["population.var"]
+#model<-lm(Observed.Deaths~Population,data=Asal)
+#summary(model)$coefficients
+```
+
