@@ -12,9 +12,14 @@ str(aft_mis_NCHS_New1)
 duplicated(NCHS_New1)
 str(NCHS_New1)
 aft_mis_NCHS_New2<- aft_mis_NCHS_New1[!(aft_mis_NCHS_New1$State == "United States"),]
+
+## Summary of Variables
 summary(aft_mis_NCHS_New2$Expected.Deaths)
 summary(aft_mis_NCHS_New2$Potentially.Excess.Deaths)
 summary(aft_mis_NCHS_New2$Observed.Deaths)
+
+## Importing dplyr library
+library(dplyr)
 
 ## Mean of data by Column
 mean_expected_deaths = mean(aft_mis_NCHS_New2$Expected.Deaths)
