@@ -172,5 +172,16 @@ gplot(Asal, aes(Expected.Deaths, Cause.of.Death))
 #Regression$coeff["population.var"]
 #model<-lm(Observed.Deaths~Population,data=Asal)
 #summary(model)$coefficients
+
+library(ggplot2)
+ggplot(aft_mis_NCHS_New2, aes(x = Population)) +
+  geom_histogram()
+ggplot(aft_mis_NCHS_New2, aes(x = Expected.Deaths)) +
+  geom_histogram()
+ggplot(aft_mis_NCHS_New2, aes(x = Observed.Deaths)) +
+  geom_histogram()
+ggplot(aft_mis_NCHS_New2, aes(x = Potentially.Excess.Deaths)) +
+  geom_histogram()
+
 ```
 
