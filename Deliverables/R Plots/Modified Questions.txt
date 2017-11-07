@@ -1,0 +1,19 @@
+1. What is the trend of all the five leading cause of deaths over time for each year?
+
+2. What is the maximum and minimum number of expected deaths,observed deaths, potentially excess 
+deaths for a particular cause of death in each age group?
+
+3. What is the trend of the deaths over various regions of US? Which region has the maximum and 
+minimum number of deaths?
+
+4. What is the trend of expected deaths, observed deaths, potentially excess deaths in each region
+for each benchmark in each locality?
+
+5. What is the ratio between the observed deaths and the Population? 
+What is the trend of the ratios over time by region?
+
+6. What is the ratio between the expected deaths and the Population? 
+What is the trend of the ratios over time by region?
+
+7. Are the ratios in questions 5 and 6 correlated?
+
