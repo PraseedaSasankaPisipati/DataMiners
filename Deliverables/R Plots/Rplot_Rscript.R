@@ -53,7 +53,7 @@ long_data_sec_New <- gather(Data_sec_New,"Death_Type", "Deaths", Observed.Deaths
 long_data_sec_New
 
 library(ggplot2)
-ggplot(data = long_data_sec_New, aes(x=factor(Age.Range), y = Deaths, colour = Death_Type, group = Death_Type)) + 
+ggplot(data = long_data_sec_New, aes(x=factor(Age.Range), y = Deaths, colour = Death_Type, group = Death_Type)) + labs(title="Trend of Deaths by Age Group", x="Age Group",y=" Number of Deaths") + 
   geom_line() + facet_wrap(~Cause.of.Death,scales = "free")
 
 
@@ -70,9 +70,9 @@ long_data_region <- gather(Data_region,"Death_Type", "Avg_Deaths", Observed.Deat
 long_data_region
   
 library(ggplot2)
-ggplot(long_data_region,aes(x = region,y = Avg_Deaths,fill = Death_Type)) + geom_bar(position = "dodge", stat = "identity")
+ggplot(long_data_region,aes(x = region,y = Avg_Deaths,fill = Death_Type)) + labs(title="Trend of Average of Deaths by Region", x="Region",y="Mean of Deaths") + geom_bar(position = "dodge", stat = "identity")
 
-#4.
+#4. Trend of Deaths by locality
 library(dplyr)
 Data_Locality <- Health_data[,c(8,9,11,12)] %>%
   group_by(Locality) %>%
@@ -84,9 +84,9 @@ long_Data_Locality <- gather(Data_Locality,"Death_Type", "Avg_Deaths", Observed.
 long_Data_Locality
 
 library(ggplot2)
-ggplot(long_Data_Locality,aes(x = Locality,y = Avg_Deaths,fill = Death_Type)) + geom_bar(position = "dodge", stat = "identity")
+ggplot(long_Data_Locality,aes(x = Locality,y = Avg_Deaths,fill = Death_Type)) + labs(title="Trend of Average of Deaths by Locality", x="Region",y="Mean of Deaths") + geom_bar(position = "dodge", stat = "identity")
 
-#5
+#5. Ratio of observed deaths and population over various regions
 Health_data$percent_obs.deaths <- Health_data$Observed.Deaths / Health_data$Population
 head(Health_data)
 Obs.Deaths_region <- Health_data[,c(14:15)] %>%
@@ -95,9 +95,9 @@ Obs.Deaths_region <- Health_data[,c(14:15)] %>%
 Obs.Deaths_region
 
 library(ggplot2)
-ggplot(Obs.Deaths_region,aes(x = region,y = percent_obs.deaths,fill = region)) + labs(title="Regions deaths") + geom_bar(stat = "identity")
+ggplot(Obs.Deaths_region,aes(x = region,y = percent_obs.deaths,fill = region)) + labs(title="Trend of Observed Deaths percentage", x="Region",y="Observed Deaths/Population") + geom_bar(stat = "identity")
 
-#6
+#6. Ratio of Expected Deaths to Population over regions
 Health_data$percent_exp.deaths <- Health_data$Expected.Deaths / Health_data$Population
 head(Health_data)
 exp.Deaths_region <- Health_data[,c(14,16)] %>%
@@ -106,7 +106,7 @@ exp.Deaths_region <- Health_data[,c(14,16)] %>%
 exp.Deaths_region
 
 library(ggplot2)
-ggplot(exp.Deaths_region,aes(x = region,y = percent_exp.deaths,fill = region)) + geom_bar(stat = "identity")
+ggplot(exp.Deaths_region,aes(x = region,y = percent_exp.deaths,fill = region)) + labs(title="Trend of Expected Deaths percentage", x="Region",y="Expected Deaths/Population")+ geom_bar(stat = "identity")
 
 #7
 cor(Health_data$percent_obs.deaths,Health_data$percent_exp.deaths)
