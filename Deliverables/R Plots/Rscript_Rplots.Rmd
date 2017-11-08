@@ -29,24 +29,21 @@ Note that the `echo = FALSE` parameter was added to the code chunk to prevent pr
 
 The Research Questions had been modified based on the comments given for the previous assignments as below:
 
-What is the trend of all the five-leading cause of deaths over time for each year?
+1. What is the trend of all the five-leading cause of deaths over time for each year?
 
-What is the maximum and minimum number of expected deaths, observed deaths, potentially excess deaths for a particular cause of death in each age group?
+2. What is the maximum and minimum number of expected deaths, observed deaths, potentially excess deaths for a particular cause of death in each age group?
 
-What is the trend of the deaths over various regions of US? Which region has the maximum and minimum number of deaths?
+3. What is the trend of the deaths over various regions of US? Which region has the maximum and minimum number of deaths?
 
-What is the trend of expected deaths, observed deaths, potentially excess deaths in each region for each benchmark in each locality?
+4. What is the trend of expected deaths, observed deaths, potentially excess deaths in each region for each benchmark in each locality?
 
-What is the ratio between the observed deaths and the Population?
+5. What is the ratio between the observed deaths and the Population?What is the trend of the ratios over time by region?
 
-What is the trend of the ratios over time by region?
+6. What is the ratio between the expected deaths and the Population?What is the trend of the ratios over time by region?
 
-What is the ratio between the expected deaths and the Population?
-What is the trend of the ratios over time by region?
+7. Are the ratios in questions 5 and 6 correlated?
 
-Are the ratios in questions 5 and 6 correlated?
-
-This document consists of R script and R plots which will help in providing answers to the above questions.
+### This document consists of R script which will help in providing answers to the above questions through R plots.
 
 NCHS_New1 <- read.csv("NCHS.csv")
 
