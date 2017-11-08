@@ -54,12 +54,15 @@ head(dat)
 library(noncensus)
 
 data(&quot;states&quot;)
+
 states
 
 Reg &lt;-states[,c(1,3)]
+
 Reg
 
 Health\_data &lt;-merge(dat,Reg,by.x =&quot;State.FIPS.Code&quot;,by.y =&quot;state&quot;)
+
 head(Health\_data)
 
 _# write.csv(Health\_data,&quot;Health data.csv&quot;)_
@@ -67,6 +70,7 @@ _# write.csv(Health\_data,&quot;Health data.csv&quot;)_
 _# 1.trend of all the five leading cause of Observed deaths over time for each region_
 
 Data\_all &lt;-Health\_data[,c(2:3,9,14)]
+
 head(Data\_all)
 
 library(dplyr)
@@ -74,6 +78,7 @@ library(dplyr)
 Data\_allNew &lt;-Data\_all  %&gt;%
   group\_by(region, Year, Cause.of.Death) %&gt;%
   summarise\_all(funs(mean))
+
 Data\_allNew
 
 library(ggplot2)
