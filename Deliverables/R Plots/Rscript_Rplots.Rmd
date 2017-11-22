@@ -2,7 +2,7 @@
 ## R Markdown
 
 ---
-title: "R Plot"  
+title: "R Script and R Plots"  
 author: "Team Data Miners"  
 date: "11/8/2017"
 ---
