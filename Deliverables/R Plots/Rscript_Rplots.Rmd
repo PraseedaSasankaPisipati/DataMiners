@@ -88,6 +88,7 @@ ggplot(data = Data_allNew, aes(x=Year, y = Observed.Deaths, colour = region, gro
   geom_line()+scale_x_continuous(breaks=seq(2005, 2015, 3)) + facet_wrap(~Cause.of.Death,scales = "free_y")
   
 ```{r Data_allNew, echo=FALSE}
+library(ggplot2)
 ggplot(data = Data_allNew, aes(x=Year, y = Observed.Deaths, colour = region, group = region)) + labs(title="Trend of Observed Deaths by Year", x="Year",y="Observed Deaths") +
   geom_line()+scale_x_continuous(breaks=seq(2005, 2015, 3)) + facet_wrap(~Cause.of.Death,scales = "free_y")
 ```
@@ -119,6 +120,7 @@ ggplot(data = long_data_sec_New, aes(x=factor(Age.Range), y = Deaths, colour = D
   geom_line() + facet_wrap(~Cause.of.Death,scales = "free")
   
 ```{r long_data_sec_New, echo=FALSE}
+library(ggplot2)
 ggplot(data = long_data_sec_New, aes(x=factor(Age.Range), y = Deaths, colour = Death_Type, group = Death_Type)) + 
   geom_line() + facet_wrap(~Cause.of.Death,scales = "free")
 ```
@@ -145,6 +147,7 @@ library(ggplot2)
 ggplot(long_data_region,aes(x = region,y = Avg_Deaths,fill = Death_Type)) + labs(title="Trend of Average of Deaths by Region", x="Region",y="Mean of Deaths") + geom_bar(position = "dodge", stat = "identity")
 
 ```{r long_data_region, echo=FALSE}
+library(ggplot2)
 ggplot(long_data_region,aes(x = region,y = Avg_Deaths,fill = Death_Type)) + labs(title="Trend of Average of Deaths by Region", x="Region",y="Mean of Deaths") + 
   geom_bar(position = "dodge", stat = "identity")
 ```
@@ -170,6 +173,7 @@ library(ggplot2)
 ggplot(long_Data_Locality,aes(x = Locality,y = Avg_Deaths,fill = Death_Type)) + labs(title="Trend of Average of Deaths by Locality", x="Region",y="Mean of Deaths") + geom_bar(position = "dodge", stat = "identity")
 
 ```{r long_Data_Locality, echo=FALSE}
+library(ggplot2)
 ggplot(long_Data_Locality,aes(x = Locality,y = Avg_Deaths,fill = Death_Type)) + labs(title="Trend of Average of Deaths by Locality", x="Region",y="Mean of Deaths") + geom_bar(position = "dodge", stat = "identity")
 ```
 
@@ -190,6 +194,7 @@ library(ggplot2)
 ggplot(Obs.Deaths_region,aes(x = region,y = percent_obs.deaths,fill = region)) + labs(title="Trend of Observed Deaths percentage", x="Region",y="Observed Deaths/Population") + geom_bar(stat = "identity")
 
 ```{r Obs.Deaths_region, echo=FALSE}
+library(ggplot2)
 ggplot(Obs.Deaths_region,aes(x = region,y = percent_obs.deaths,fill = region)) + labs(title="Trend of Observed Deaths percentage", x="Region",y="Observed Deaths/Population") + geom_bar(stat = "identity")
 ```
 
@@ -210,6 +215,7 @@ library(ggplot2)
 ggplot(exp.Deaths_region,aes(x = region,y = percent_exp.deaths,fill = region)) + labs(title="Trend of Expected Deaths percentage", x="Region",y="Expected Deaths/Population")+ geom_bar(stat = "identity")
 
 ```{r exp.Deaths_region, echo=FALSE}
+library(ggplot2)
 ggplot(exp.Deaths_region,aes(x = region,y = percent_obs.deaths,fill = region)) + labs(title="Trend of Observed Deaths percentage", x="Region",y="Observed Deaths/Population") + geom_bar(stat = "identity")
 ```
 
