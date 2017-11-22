@@ -2,8 +2,8 @@
 ## R Markdown
 
 ---
-title: "R Plot"
-author: "Team Data Miners"
+title: "R Plot"  
+author: "Team Data Miners"  
 date: "11/8/2017"
 ---
 
