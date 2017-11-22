@@ -1,15 +1,13 @@
 
 ## R Markdown
 
-## Including Plots
+---
+title: "R Plot"
+author: "Team Data Miners"
+date: "11/8/2017"
+---
 
-You can also embed plots, for example:
-
-
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
-
-The Research Questions had been modified based on the comments given for the previous assignments as below:
+##### The Research Questions had been modified based on the comments given for the previous assignments as below:
 
 1. What is the trend of all the five-leading cause of deaths over time for each year?
 
@@ -25,7 +23,10 @@ The Research Questions had been modified based on the comments given for the pre
 
 7. Are the ratios in questions 5 and 6 correlated?
 
+
+
 ### This document consists of R script which will help in providing answers to the above questions through R plots.
+```{r echo=FALSE}
 
 NCHS_New1 <- read.csv("NCHS.csv")
 
@@ -64,6 +65,7 @@ Reg
 Health_data <- merge(dat,Reg,by.x = "State.FIPS.Code",by.y = "state")
 
 head(Health_data)
+```
 
 ### write.csv(Health_data,"Health data.csv")
 
