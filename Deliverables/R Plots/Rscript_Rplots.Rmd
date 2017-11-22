@@ -216,7 +216,7 @@ ggplot(exp.Deaths_region,aes(x = region,y = percent_exp.deaths,fill = region)) +
 
 ```{r exp.Deaths_region, echo=FALSE}
 library(ggplot2)
-ggplot(exp.Deaths_region,aes(x = region,y = percent_obs.deaths,fill = region)) + labs(title="Trend of Observed Deaths percentage", x="Region",y="Observed Deaths/Population") + geom_bar(stat = "identity")
+ggplot(exp.Deaths_region,aes(x = region,y = percent_exp.deaths,fill = region)) + labs(title="Trend of Observed Deaths percentage", x="Region",y="Observed Deaths/Population") + geom_bar(stat = "identity")
 ```
 
 # 7. Correlation between both the ratios in Questions 5 and 6
