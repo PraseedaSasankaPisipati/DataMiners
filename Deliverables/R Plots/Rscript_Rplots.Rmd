@@ -65,7 +65,6 @@ Reg
 Health_data <- merge(dat,Reg,by.x = "State.FIPS.Code",by.y = "state")
 
 head(Health_data)
-```
 
 ### write.csv(Health_data,"Health data.csv")
 
