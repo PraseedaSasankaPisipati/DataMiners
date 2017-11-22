@@ -1,29 +1,11 @@
----
-title: "Rscript_Rplots"
-output: html_document
----
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
 
 ## R Markdown
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
-```
 
 ## Including Plots
 
 You can also embed plots, for example:
 
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
+
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
 
@@ -103,6 +85,11 @@ library(ggplot2)
 
 ggplot(data = Data_allNew, aes(x=Year, y = Observed.Deaths, colour = region, group = region)) + labs(title="Trend of Observed Deaths by Year", x="Year",y="Observed Deaths") +
   geom_line()+scale_x_continuous(breaks=seq(2005, 2015, 3)) + facet_wrap(~Cause.of.Death,scales = "free_y")
+  
+```{r Data_allNew, echo=FALSE}
+ggplot(data = Data_allNew, aes(x=Year, y = Observed.Deaths, colour = region, group = region)) + labs(title="Trend of Observed Deaths by Year", x="Year",y="Observed Deaths") +
+  geom_line()+scale_x_continuous(breaks=seq(2005, 2015, 3)) + facet_wrap(~Cause.of.Death,scales = "free_y")
+```
 
 
 # 2. Max and Min value of all types of deaths in Each age group
@@ -129,6 +116,11 @@ library(ggplot2)
 
 ggplot(data = long_data_sec_New, aes(x=factor(Age.Range), y = Deaths, colour = Death_Type, group = Death_Type)) + labs(title="Trend of Deaths by Age Group", x="Age Group",y=" Number of Deaths") + 
   geom_line() + facet_wrap(~Cause.of.Death,scales = "free")
+  
+```{r long_data_sec_New, echo=FALSE}
+ggplot(data = long_data_sec_New, aes(x=factor(Age.Range), y = Deaths, colour = Death_Type, group = Death_Type)) + 
+  geom_line() + facet_wrap(~Cause.of.Death,scales = "free")
+```
 
 
 # 3. Max and Min Deaths by region
@@ -151,6 +143,11 @@ library(ggplot2)
 
 ggplot(long_data_region,aes(x = region,y = Avg_Deaths,fill = Death_Type)) + labs(title="Trend of Average of Deaths by Region", x="Region",y="Mean of Deaths") + geom_bar(position = "dodge", stat = "identity")
 
+```{r long_data_region, echo=FALSE}
+ggplot(long_data_region,aes(x = region,y = Avg_Deaths,fill = Death_Type)) + labs(title="Trend of Average of Deaths by Region", x="Region",y="Mean of Deaths") + 
+  geom_bar(position = "dodge", stat = "identity")
+```
+
 # 4. Trend of Deaths by locality
 
 library(dplyr)
@@ -171,6 +168,10 @@ library(ggplot2)
 
 ggplot(long_Data_Locality,aes(x = Locality,y = Avg_Deaths,fill = Death_Type)) + labs(title="Trend of Average of Deaths by Locality", x="Region",y="Mean of Deaths") + geom_bar(position = "dodge", stat = "identity")
 
+```{r long_Data_Locality, echo=FALSE}
+ggplot(long_Data_Locality,aes(x = Locality,y = Avg_Deaths,fill = Death_Type)) + labs(title="Trend of Average of Deaths by Locality", x="Region",y="Mean of Deaths") + geom_bar(position = "dodge", stat = "identity")
+```
+
 # 5. Ratio of observed deaths and population over various regions
 
 Health_data$percent_obs.deaths <- Health_data$Observed.Deaths / Health_data$Population
@@ -186,6 +187,10 @@ Obs.Deaths_region
 library(ggplot2)
 
 ggplot(Obs.Deaths_region,aes(x = region,y = percent_obs.deaths,fill = region)) + labs(title="Trend of Observed Deaths percentage", x="Region",y="Observed Deaths/Population") + geom_bar(stat = "identity")
+
+```{r Obs.Deaths_region, echo=FALSE}
+ggplot(Obs.Deaths_region,aes(x = region,y = percent_obs.deaths,fill = region)) + labs(title="Trend of Observed Deaths percentage", x="Region",y="Observed Deaths/Population") + geom_bar(stat = "identity")
+```
 
 # 6. Ratio of Expected Deaths to Population over regions
 
@@ -203,8 +208,13 @@ library(ggplot2)
 
 ggplot(exp.Deaths_region,aes(x = region,y = percent_exp.deaths,fill = region)) + labs(title="Trend of Expected Deaths percentage", x="Region",y="Expected Deaths/Population")+ geom_bar(stat = "identity")
 
+```{r exp.Deaths_region, echo=FALSE}
+ggplot(exp.Deaths_region,aes(x = region,y = percent_obs.deaths,fill = region)) + labs(title="Trend of Observed Deaths percentage", x="Region",y="Observed Deaths/Population") + geom_bar(stat = "identity")
+```
+
 # 7. Correlation between both the ratios in Questions 5 and 6
 
 cor(Health_data$percent_obs.deaths,Health_data$percent_exp.deaths)
 
 #### There is a Positive correlation of 0.9469511 between the two ratios
+There is a 0.94 correlation between the two ratios which means that the ratios are in sync for 94% of the records. But the ratios recorded a non-corrleation i.e one ratio increased and the other ratio decreased in 6% of the cases. 
