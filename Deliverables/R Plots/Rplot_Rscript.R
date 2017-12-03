@@ -1,5 +1,5 @@
 
-
+options(warn = 0)
 NCHS_New1 <- read.csv("NCHS.csv")
 str(NCHS_New1)
 summary(NCHS_New1)
@@ -54,7 +54,7 @@ long_data_sec_New
 
 library(ggplot2)
 ggplot(data = long_data_sec_New, aes(x=factor(Age.Range), y = Deaths, colour = Death_Type, group = Death_Type)) + labs(title="Trend of Deaths by Age Group", x="Age Group",y=" Number of Deaths") + 
-  geom_line() + facet_wrap(~Cause.of.Death,scales = "free")
+  geom_line() + facet_wrap(~Cause.of.Death,scales = "free")+ theme(axis.text=element_text(size=5))
 
 
 
