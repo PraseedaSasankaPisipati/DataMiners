@@ -4,12 +4,12 @@ This Document includes:
 2. List of Files/Folders
 3. License
 
-## 1. Team Members
+## Team Members
 1. Sasanka Pisipati
 2. Zahra Hatami
 3. Sowjanya Joga
 
-## 2. List of Files/Folders
+## List of Files/Folders
 1. README.md
 2. Knitted HTML Document (Data Cleaning Documentation and R script with plots)
 3. Audience Persona
