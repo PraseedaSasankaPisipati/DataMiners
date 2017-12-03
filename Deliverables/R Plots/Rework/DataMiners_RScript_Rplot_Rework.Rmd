@@ -1,0 +1,189 @@
+
+## R Markdown
+
+---
+title: "R Plot"
+author: "Team Data Miners"
+date: "11/8/2017"
+---
+
+##### The Research Questions had been modified based on the comments given for the previous assignments as below:
+
+1. What is the trend of all the five-leading cause of deaths over time for each year?
+
+2. What is the maximum and minimum number of expected deaths, observed deaths, potentially excess deaths for a particular cause of death in each age group?
+
+3. What is the trend of the deaths over various regions of US? Which region has the maximum and minimum number of deaths?
+
+4. What is the trend of expected deaths, observed deaths, potentially excess deaths in each region for each benchmark in each locality?
+
+5. What is the ratio between the observed deaths and the Population?What is the trend of the ratios over time by region?
+
+6. What is the ratio between the expected deaths and the Population?What is the trend of the ratios over time by region?
+
+7. Are the ratios in questions 5 and 6 correlated?
+
+
+
+### This document consists of R script which will help in providing answers to the above questions through R plots.
+
+### R plots
+```{r echo=FALSE}
+
+NCHS_New1 <- read.csv("NCHS.csv")
+
+
+aft_mis_NCHS_New1<-na.omit(NCHS_New1)
+
+
+aft_mis_NCHS_New2<- aft_mis_NCHS_New1[!(aft_mis_NCHS_New1$State == "United States"),]
+
+
+dat <- aft_mis_NCHS_New2
+
+
+library(noncensus)
+
+data("states")
+
+
+Reg <- states[,c(1,3)]
+
+
+Health_data <- merge(dat,Reg,by.x = "State.FIPS.Code",by.y = "state")
+
+
+### write.csv(Health_data,"Health data.csv")
+```
+
+# 1.trend of all the five leading cause of Observed deaths over time for each region
+```{r Data_allNew, echo=FALSE}
+Data_all <- Health_data[,c(2:3,9,14)]
+
+
+library(dplyr)
+
+Data_allNew <- Data_all  %>%
+  group_by(region, Year, Cause.of.Death) %>%
+  summarise_all(funs(mean))
+
+
+library(ggplot2)
+
+ggplot(data = Data_allNew, aes(x=Year, y = Observed.Deaths, colour = region, group = region)) + labs(title="Trend of Observed Deaths by Year", x="Year",y="Observed Deaths") +
+  geom_line()+scale_x_continuous(breaks=seq(2005, 2015, 3)) + facet_wrap(~Cause.of.Death,scales = "free_y")
+```
+
+
+This plot provides the overview of trend for the five leading cause of deaths (observed deaths) over time. From the plot we could see that "Cancer" has the highest number of deaths and that is in the southern region of United States. The lower number of deaths could be seen for "Stroke" in the western region of United States. The order of the trends in descending order are Cancer, Heart Disease, Unintentional Injury, Chronic Lower Respiratory Disease, Stroke.  
+
+# 2. Max and Min value of all types of deaths in Each age group
+```{r long_data_sec_New, echo=FALSE}
+Data_sec <- Health_data[,c(3,6,9,11,12)]
+
+library(dplyr)
+
+Data_sec_New <- Data_sec  %>%
+  group_by(Age.Range, Cause.of.Death) %>%
+  summarise_all(funs(mean))
+
+library(tidyr)
+
+long_data_sec_New <- gather(Data_sec_New,"Death_Type", "Deaths", Observed.Deaths, Expected.Deaths, Potentially.Excess.Deaths)
+
+library(ggplot2)
+
+ggplot(data = long_data_sec_New, aes(x=factor(Age.Range), y = Deaths, colour = Death_Type, group = Death_Type)) + labs(title="Trend of Deaths by Age Group", x="Age Group",y=" Number of Deaths") + 
+  geom_line() + facet_wrap(~Cause.of.Death,scales = "free")
+```
+
+
+This plot provides the trend of all types of deaths for each age group. In this plot we could see that the observed deaths are always greater than the expected deaths. As the age increases the numbers of deaths kept increasing. This behavior is consistent for all the causes of death.
+
+# 3. Max and Min Deaths by region
+```{r long_data_region, echo=FALSE}
+library(dplyr)
+
+Data_region <- Health_data[,c(9,11,12,14)] %>%
+  group_by(region) %>%
+  summarise_all(funs(mean))
+
+library(tidyr)
+
+long_data_region <- gather(Data_region,"Death_Type", "Avg_Deaths", Observed.Deaths, Expected.Deaths, Potentially.Excess.Deaths)
+
+library(ggplot2)
+
+ggplot(long_data_region,aes(x = region,y = Avg_Deaths,fill = Death_Type)) + labs(title="Trend of Average of Deaths by Region", x="Region",y="Mean of Deaths") + geom_bar(position = "dodge", stat = "identity")
+```
+
+
+This plot gives the mean of all the deaths over various regions. The observed deaths are more in the southern part of the United States followed by Northeast, Midwest and West. The Expected Deaths average is almost equal in both South and Northeast. Midwest and West also have equal averages but lower than South and Northeast. South region also has the maximum average for potentially excess deaths followed by Midwest, Northeast and West
+
+# 4. Trend of Deaths by locality
+```{r long_Data_Locality, echo=FALSE}
+library(dplyr)
+
+Data_Locality <- Health_data[,c(8,9,11,12)] %>%
+  group_by(Locality) %>%
+  summarise_all(funs(mean))
+
+library(tidyr)
+
+long_Data_Locality <- gather(Data_Locality,"Death_Type", "Avg_Deaths", Observed.Deaths, Expected.Deaths, Potentially.Excess.Deaths)
+
+library(ggplot2)
+
+ggplot(long_Data_Locality,aes(x = Locality,y = Avg_Deaths,fill = Death_Type)) + labs(title="Trend of Average of Deaths by Locality", x="Region",y="Mean of Deaths") + geom_bar(position = "dodge", stat = "identity")
+```
+
+
+This plot provides the means of all the deaths by locality. For all the death parameters the highest and lowest are consistent which are found in All localities and Non-Metropolitan.
+
+# 5. Ratio of observed deaths and population over various regions
+```{r Obs.Deaths_region, echo=FALSE}
+Health_data$percent_obs.deaths <- Health_data$Observed.Deaths / Health_data$Population
+
+Obs.Deaths_region <- Health_data[,c(14:15)] %>%
+  group_by(region) %>%
+  summarise_all(funs(mean))
+
+library(ggplot2)
+
+ggplot(Obs.Deaths_region,aes(x = region,y = percent_obs.deaths/20000000000000000,fill = region)) + labs(title="Trend of Observed Deaths percentage", x="Region",y="Observed Deaths/Population") + geom_bar(stat = "identity")
+```
+
+
+
+This plot provides the fact that the observed deaths percentage is found highest in the Northeast and the lowest in West. Based on different regions (Midwest, Northeast, West and South) in the united states, the average for Observed deaths in south of united states is larger than other regions and so percentage of observed deaths in south of united states is more than other regions.
+
+# 6. Ratio of Expected Deaths to Population over regions
+```{r exp.Deaths_region, Obs.Deaths_region, echo=FALSE}
+Health_data$percent_exp.deaths <- Health_data$Expected.Deaths / Health_data$Population
+Health_data$percent_obs.deaths <- Health_data$Observed.Deaths / Health_data$Population
+
+exp.Deaths_region <- Health_data[,c(14,16)] %>%
+  group_by(region) %>%
+  summarise_all(funs(mean))
+
+library(ggplot2)
+
+ggplot(exp.Deaths_region,aes(x = region,y = percent_exp.deaths,fill = region)) + labs(title="Trend of Expected Deaths percentage", x="Region",y="Expected Deaths/Population")+ geom_bar(stat = "identity")
+```
+
+
+
+This plot is between ratio of expected deaths to population over regions. The expected death in northeast has highest rate compared with other regions. So even the expected death in northeast is greater than other regions. But as observed deaths in south of the united states is much greater than other regions, the potentially excess deaths (difference between expected death and observed death) in south of America is greater than other regions.
+
+# 7. Correlation between both the ratios in Questions 5 and 6
+```{r Obs.Deaths_region3, echo=FALSE}
+cor(Health_data$percent_obs.deaths,Health_data$percent_exp.deaths)
+```
+
+#### There is a Positive correlation of 0.9469511 between the two ratios
+There is a 0.94 correlation between the two ratios which means that the ratios are in sync for 94% of the records. 
+But the ratios recorded a non-corrleation i.e one ratio increased and the other ratio decreased in 6% of the cases. 
+
+### R Script Link
+Below is the link to R Script which can be executed to generate the plots
+[R Script Link](https://github.com/PraseedaSasankaPisipati/DataMiners/blob/master/Deliverables/R%20Plots/Rplot_Rscript.R)
