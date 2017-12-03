@@ -12,8 +12,8 @@ This Document includes:
 ## List of Files/Folders
 1. README.md
 2. Knitted HTML Document (Data Cleaning Documentation and R script with plots)
-3. Audience Persona
-4. Summary 
+3. DataMiners_Audience Persona_AudiencePersona.pdf
+4. DataMiners_Analysis_Summary.md 
 5. Slides
 6. Contributorship Document
 
