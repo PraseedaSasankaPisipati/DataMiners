@@ -11,12 +11,11 @@ This Document includes:
 
 ## List of Files/Folders
 1. DataMiners_GitPackage_README.md
-2. DataMiners_KnittedHTML_RScript_Rplot.html (Data Cleaning Documentation and R script with plots)
-3. DataMiners_KnittedHTML_RScript_Rplot.Rmd
-4. DataMiners_Audience Persona_AudiencePersona.pdf
-5. DataMiners_Analysis_Summary.md 
+2. DataMiners_GitPackage_KnittedHTML.html (Data Cleaning Documentation and R script with plots)
+4. DataMiners_GitPackage_AudiencePersona.pdf
+5. DataMiners_GitPackage_SummaryReport.pdf 
 6. Slides
-7. Contributorship Document
+7. DataMiners_GitPackage_Contributorship.md
 
 
 ## License Information for the Data Set:
