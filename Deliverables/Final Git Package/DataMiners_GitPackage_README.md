@@ -10,7 +10,7 @@ This Document includes:
 3. Sowjanya Joga
 
 ## List of Files/Folders
-1. README.md
+1. DataMiners_GitPackage_README.md
 2. DataMiners_KnittedHTML_RScript_Rplot.html (Data Cleaning Documentation and R script with plots)
 3. DataMiners_KnittedHTML_RScript_Rplot.Rmd
 4. DataMiners_Audience Persona_AudiencePersona.pdf
