@@ -1,4 +1,4 @@
-### This is an informal markdown document for the team project in the "Data to Decisions" Course.
+### This is a readme markdown document for the team project in the "Data to Decisions" Course.
 This Document includes:
 1. Team Members
 2. List of Files/Folders
@@ -14,7 +14,7 @@ This Document includes:
 2. DataMiners_GitPackage_KnittedHTML.html (Data Cleaning Documentation and R script with plots)
 4. DataMiners_GitPackage_AudiencePersona.pdf
 5. DataMiners_GitPackage_SummaryReport.pdf 
-6. DataMiners_GitPackage_PresentationSlidesSlides
+6. DataMiners_GitPackage_PresentationSlides.pdf
 7. DataMiners_GitPackage_Contributorship.md
 
 
