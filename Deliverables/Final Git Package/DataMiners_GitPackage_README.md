@@ -14,7 +14,7 @@ This Document includes:
 2. DataMiners_GitPackage_KnittedHTML.html (Data Cleaning Documentation and R script with plots)
 4. DataMiners_GitPackage_AudiencePersona.pdf
 5. DataMiners_GitPackage_SummaryReport.pdf 
-6. Slides
+6. DataMiners_GitPackage_PresentationSlidesSlides
 7. DataMiners_GitPackage_Contributorship.md
 
 
