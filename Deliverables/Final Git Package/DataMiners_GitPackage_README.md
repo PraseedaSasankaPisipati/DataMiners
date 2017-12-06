@@ -9,6 +9,7 @@ This Document includes:
 2. Zahra Hatami
 3. Sowjanya Joga
 
+
 ## List of Files/Folders
 1. DataMiners_GitPackage_README.md
 2. DataMiners_GitPackage_KnittedHTML.html (Data Cleaning Documentation and R script with plots)
